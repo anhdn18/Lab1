@@ -11,9 +11,16 @@ class helloController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function hello()
     {
-        return view('hello');
+        $name ='anhdn';
+        $age = '20';
+        $add='hanoi';
+        return view('hello', [
+            'ten' => $name,
+            'tuoi' => $age,
+            'add' =>$add,
+        ]);
     }
 
     /**

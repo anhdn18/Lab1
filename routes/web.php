@@ -14,4 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('hello', 'helloControlller@index');
+Route::get('user/{id}/{name}', function ($index, $name) {
+    return 'tham so truyen vao' .$index . ' --- ' .$name;
+});
+Route::get('hello', 'helloController@hello');
